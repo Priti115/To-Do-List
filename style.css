@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(140deg, 
+        rgb(1, 111, 229) 10%,  
+        rgb(4, 47, 132) 50%,   
+        rgb(91, 1, 91) 90%    
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #b40000;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px; 
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #fc295a; 
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #ddd; /* Added border for better task separation */
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('images/unchecked.png'); /* Fixed spacing and ensured proper path formatting */
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+/* Styling for completed tasks */
+ul li.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+ul li.completed::before {
+    background-image: url('images/checked.png'); /* Change the icon when task is completed */
+}
+
+ul li span{
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 24px;
+    text-align: center;
+}
+
+ul li span{
+    background: transparent;
+    border-radius: 50px;
+    color: #999898;
+}
+
+ul li span:hover{
+    background-color: #fa5d31;
+    color: #fff;
+}
+
+

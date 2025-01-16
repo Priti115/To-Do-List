@@ -1,0 +1,45 @@
+/* Mobile-specific CSS */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .todo-app {
+        width: 90%;
+        padding: 20px;
+        margin: 50px auto;
+        border-radius: 15px;
+    }
+
+    .todo-app h2 {
+        font-size: 24px;
+    }
+
+    .row {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding: 10px 35px;
+    }
+
+    ul li::before {
+        height: 20px;
+        width: 20px;
+    }
+}
